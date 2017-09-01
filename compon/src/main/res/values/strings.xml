@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Simple</string>
+
+    <!--// name fragments-->
+    <!--<string name="category">category</string>-->
+    <!--<string name="list_category">list_category</string>-->
+    <!--<string name="schedule">schedule</string>-->
+    <!--<string name="goals">goals</string>-->
+    <!--<string name="spinner">spinner</string>-->
+</resources>

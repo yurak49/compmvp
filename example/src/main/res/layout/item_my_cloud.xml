@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_main_3"
+    android:padding="@dimen/pad_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_white_r_4"
+        android:padding="@dimen/pad_2">
+
+        <RelativeLayout
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/img_cloud"
+                android:layout_width="@dimen/pad_24"
+                android:layout_height="@dimen/pad_24"
+                android:src="@drawable/button_cloud_blue" />
+
+            <com.yurak.yurii.compon.components.SimpleImageView
+                android:id="@+id/PictureUrl"
+                android:layout_width="@dimen/pad_160"
+                android:layout_height="@dimen/pad_80"
+                android:layout_below="@+id/img_cloud"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/pad_4"
+                app:placeholder="@drawable/cloud_blank"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/progr"
+                android:layout_width="@dimen/pad_160"
+                android:layout_height="@dimen/pad_10"
+                android:layout_below="@+id/PictureUrl"
+                android:layout_centerHorizontal="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@android:color/holo_blue_light"
+                    android:id="@+id/max" />
+                <LinearLayout
+                    android:layout_width="@dimen/pad_80"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@android:color/holo_blue_dark"
+                    android:id="@+id/percent" />
+                <LinearLayout
+                    android:layout_width="@dimen/pad_150"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/pad_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad_40"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/pad_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad_40"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/pad_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad_40"
+                        android:background="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progr"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black_color"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_2"
+                android:paddingTop="@dimen/pad_2" />
+
+            <com.yurak.yurii.compon.components.SimpleTextView
+                android:id="@+id/Goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Name"
+                app:numberFormat="%.2f"
+                android:textColor="@color/black_color"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="@dimen/pad_2"
+                android:textSize="@dimen/pad_12" />
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_name_cloud"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/progr"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:textColor="@color/black_color"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="@dimen/pad_2"-->
+            <!--android:paddingTop="@dimen/pad_2" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_balance_goal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_name_cloud"-->
+            <!--android:textColor="@color/black_color"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:paddingBottom="@dimen/pad_2"-->
+            <!--android:textSize="@dimen/pad_12" />-->
+    </RelativeLayout>
+</LinearLayout>

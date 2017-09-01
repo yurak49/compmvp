@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/t"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/buble_color">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Qweerr"
+            android:textColor="@color/white"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_cloud"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/t">
+
+        <ImageView
+            android:id="@+id/Recipient.PictureUrl"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="4dp"
+            android:src="@drawable/profile_blank" />
+
+        <TextView
+            android:id="@+id/FirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Recipient.PictureUrl"
+            android:textColor="@color/black_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_toRightOf="@+id/Recipient.PictureUrl"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_36"
+            android:layout_toRightOf="@+id/Recipient.PictureUrl"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_50"
+            android:layout_toRightOf="@+id/Recipient.PictureUrl"
+            android:textColor="@color/blue_main_1"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/Recipient.PictureUrl"
+            android:background="@color/gray" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profile">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="10dp"
+                android:text="@string/profile_my_cloud" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/clouds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingLeft="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/pad_2"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/title_my_connection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_10"
+                android:paddingLeft="@dimen/pad_10"
+                android:text="@string/profile_my_connection" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/connection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_my_connection"
+                android:layout_marginTop="@dimen/pad_4"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingLeft="@dimen/pad_10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_4">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/title_friendcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad_10"
+                    android:paddingLeft="@dimen/pad_10"
+                    android:text="@string/profile_friendcast" />
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/pad_4"
+                    android:layout_marginTop="@dimen/pad_6"
+                    android:src="@drawable/button_friendcast_dark" />
+
+                <com.yurak.yurii.compon.components.StaticList
+                    android:id="@+id/friendcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_friendcast"
+                    android:layout_marginTop="@dimen/pad_4"
+                    android:paddingLeft="@dimen/pad_10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad_12"
+                    android:layout_below="@+id/friendcast"
+                    android:background="@color/white"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/profile"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img"-->
+                    <!--android:layout_width="@dimen/pad_70"-->
+                    <!--android:layout_height="@dimen/pad_70"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_margin="@dimen/pad_4"-->
+                    <!--android:src="@drawable/profile_blank" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/first_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/img"-->
+                    <!--android:textColor="@color/black_color"-->
+                    <!--android:textSize="@dimen/text_size_18"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/last_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/pad_20"-->
+                    <!--android:layout_toRightOf="@+id/img"-->
+                    <!--android:textSize="@dimen/text_size_14" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/mail"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/pad_36"-->
+                    <!--android:layout_toRightOf="@+id/img"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/message"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/pad_50"-->
+                    <!--android:layout_toRightOf="@+id/img"-->
+                    <!--android:textColor="@color/blue_main_1"-->
+                    <!--android:textSize="@dimen/text_size_12" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_below="@+id/img"-->
+                    <!--android:background="@color/gray" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<ScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/profile"-->
+                <!--android:overScrollMode="never">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/black_light">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/my_cloud"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/title_my_cloud"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/pad_4"-->
+                            <!--android:paddingLeft="@dimen/pad_10"-->
+                            <!--android:text="@string/profile_my_cloud" />-->
+
+                        <!--<android.support.v7.widget.RecyclerView-->
+                            <!--android:id="@+id/rv_my_cloud"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/title_my_cloud"-->
+                            <!--android:layout_marginTop="@dimen/pad_4"-->
+                            <!--android:clipToPadding="false"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:overScrollMode="never"-->
+                            <!--android:paddingLeft="@dimen/pad_10" />-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/my_connection"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/my_cloud"-->
+                        <!--android:layout_marginTop="@dimen/pad_6">-->
+
+                        <!--<View-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="1dp"-->
+                            <!--android:layout_marginTop="@dimen/pad_2"-->
+                            <!--android:background="@color/gray" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/title_my_connection"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/pad_10"-->
+                            <!--android:paddingLeft="@dimen/pad_10"-->
+                            <!--android:text="@string/profile_my_connection" />-->
+
+                        <!--<android.support.v7.widget.RecyclerView-->
+                            <!--android:id="@+id/rv_my_connection"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/title_my_connection"-->
+                            <!--android:layout_marginTop="@dimen/pad_4"-->
+                            <!--android:clipToPadding="false"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:overScrollMode="never"-->
+                            <!--android:paddingLeft="@dimen/pad_10" />-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/friend_rl"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/my_connection"-->
+                        <!--android:layout_marginTop="@dimen/pad_4">-->
+
+                        <!--<View-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="1dp"-->
+                            <!--android:layout_marginTop="@dimen/pad_2"-->
+                            <!--android:background="@color/gray" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/title_friendcast"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/pad_10"-->
+                            <!--android:paddingLeft="@dimen/pad_10"-->
+                            <!--android:text="@string/profile_friendcast" />-->
+
+                        <!--<ImageView-->
+
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_marginRight="@dimen/pad_4"-->
+                            <!--android:layout_marginTop="@dimen/pad_6"-->
+                            <!--android:src="@drawable/button_friendcast_dark" />-->
+
+                        <!--<brander.ua.moneyclouds.tools.ListScroll-->
+                            <!--android:id="@+id/friendcast"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/title_friendcast"-->
+                            <!--android:layout_marginTop="@dimen/pad_4"-->
+                            <!--android:paddingLeft="@dimen/pad_10" />-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/pad_12"-->
+                            <!--android:layout_below="@+id/friendcast"-->
+                            <!--android:background="@color/white"/>-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/load_older"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/friend_rl"-->
+                        <!--android:visibility="gone">-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/pad_34"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/load"-->
+                            <!--android:textColor="@color/blue_cloud_2" />-->
+
+                        <!--<ProgressBar-->
+                            <!--android:id="@+id/full_screen_progress"-->
+                            <!--style="?android:progressBarStyleLarge"-->
+                            <!--android:layout_width="@dimen/pad_34"-->
+                            <!--android:layout_height="@dimen/pad_34"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--android:layout_marginRight="@dimen/pad_12"-->
+                            <!--android:indeterminate="true"-->
+                            <!--android:visibility="gone" />-->
+                    <!--</RelativeLayout>-->
+
+                <!--</RelativeLayout>-->
+            <!--</ScrollView>-->
+        <!--</RelativeLayout>-->
+</RelativeLayout>

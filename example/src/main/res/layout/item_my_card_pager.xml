@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_pager_card_h"
+        android:id="@+id/abonnementImg"
+        android:layout_marginTop="@dimen/_pad_28"
+        android:layout_marginLeft="@dimen/_pad_40"
+        android:layout_marginRight="@dimen/_pad_40"
+        app:riv_corner_radius="@dimen/_pad_6"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/abonnementType"
+        style="@style/st_18_black"
+        android:layout_marginTop="@dimen/_pad_8" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/timeBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/st_14_black_35" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "/>
+        <TextView
+            android:id="@+id/timeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/st_14_black_35"/>
+    </LinearLayout>
+
+</LinearLayout>

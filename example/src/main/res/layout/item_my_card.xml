@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/_pad_8">
+    <TextView
+        android:id="@+id/invoiceNameA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/st_14_black_50"
+        android:text="JJJHJJ"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_pad_24"
+        android:layout_toLeftOf="@+id/amount" />
+    <LinearLayout
+        android:id="@+id/invoice_l"
+        android:layout_width="@dimen/_pad_32"
+        android:layout_height="@dimen/_pad_32"
+        android:background="@color/_primary"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="false"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/_pad_12">
+        <ImageView
+            android:layout_width="@dimen/_icon_wh"
+            android:layout_height="@dimen/_icon_wh"
+            android:src="@drawable/icon_history" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="@dimen/_pad_72"
+        android:layout_height="wrap_content"
+        style="@style/st_16_primary"
+        android:text="289.99"
+        android:layout_alignParentRight="false"
+        android:layout_toLeftOf="@+id/invoice_l"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:layout_marginRight="@dimen/_pad_8" />
+</RelativeLayout>

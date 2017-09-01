@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/pad_2"
+    android:layout_marginRight="@dimen/pad_2"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/pad_6">
+
+    <com.yurak.yurii.compon.components.SimpleImageView
+        android:id="@+id/PictureUrl"
+        android:layout_width="@dimen/pad_56"
+        android:layout_height="@dimen/pad_56"
+        app:placeholder="@drawable/profile_blank"/>
+
+    <TextView
+        android:id="@+id/FirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5"
+        android:textColor="@color/black_color" />
+
+    <TextView
+        android:id="@+id/LastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color" />
+
+    <TextView
+        android:id="@+id/MCNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue_main_1" />
+</LinearLayout>

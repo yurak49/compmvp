@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CompMVP</string>
+// name fragments
+    <string name="category">category</string>
+    <string name="list_category">list_category</string>
+    <string name="schedule">schedule</string>
+    <string name="group">group</string>
+    <string name="goals">goals</string>
+    <string name="spinner">spinner</string>
+    <string name="money">money</string>
+    <string name="cloud_p">cloud_p</string>
+    <string name="club_p">club_p</string>
+    <string name="pager_f">pager_f</string>
+    <string name="login">login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="abonem">abonem</string>
+    <string name="parent">parent</string>
+    <string name="multi">multi</string>
+    <string name="multi_category">multi_category</string>
+    <string name="profile_my_cloud">MY CLOUD</string>
+    <string name="profile_my_connection">MY CONNECTION</string>
+    <string name="profile_friendcast">FRIENDCAST</string>
+    <string name="my_cloud">my_cloud</string>
+    <string name="btn_sign_in_2">Sign In</string>
+    <string name="btn_sign_up_2">Don\'t have an account?</string>
+    <string name="btn_sign_up_3">Sign Up</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string-array name="tab_cloud_club">
+        <item>Cloud</item>
+        <item>Club</item>
+    </string-array>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/panel"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.yurak.yurii.compon.components.StaticList
+            android:id="@+id/invoices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemLayoutId="@layout/item_my_card"/>
+        <com.yurak.yurii.compon.components.PagerSimple
+            android:id="@+id/cards"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:indicator="@+id/indicator"
+            app:itemLayoutId="@layout/item_my_card_pager"/>
+        <com.yurak.yurii.compon.components.PagerIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:diametrItem="@dimen/_pad_6"
+            app:itemId="@drawable/circle_primary"
+            app:itemSelectId="@drawable/circle_primary_dark"/>
+    </LinearLayout>
+
+</LinearLayout>
