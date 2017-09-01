@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CompMVP.iml" filepath="$PROJECT_DIR$/CompMVP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compon/compon.iml" filepath="$PROJECT_DIR$/compon/compon.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/progcomp/progcomp.iml" filepath="$PROJECT_DIR$/progcomp/progcomp.iml" />
     </modules>
   </component>
 </project>

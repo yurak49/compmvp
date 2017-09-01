@@ -1,1 +1,1 @@
-include ':example', ':progcomp'
+include ':example', ':compon'
